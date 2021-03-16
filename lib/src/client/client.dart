@@ -155,7 +155,7 @@ class Client {
 
         dynamic responseBody;
         if (body?.isNotEmpty == true) {
-          responseBody = await processJson(body);
+          responseBody = await processJson(body)!;
         }
 
         var response = Response(
