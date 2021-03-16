@@ -152,15 +152,11 @@ class Client {
             url: request.url,
           );
         }
-
-       try{
-            dynamic responseBody;
+          
+        dynamic responseBody;
         if (body?.isNotEmpty == true) {
-          responseBody = (await processJson(body))!;
+          responseBody = (await processJson(body!))!;
         }
-       }catch(e){
-           print(e);
-       }
 
         var response = Response(
           body: responseBody,
