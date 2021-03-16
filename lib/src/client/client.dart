@@ -153,10 +153,14 @@ class Client {
           );
         }
 
-        dynamic responseBody;
+       try{
+            dynamic responseBody;
         if (body?.isNotEmpty == true) {
           responseBody = (await processJson(body))!;
         }
+       }catch(e){
+           print(e);
+       }
 
         var response = Response(
           body: responseBody,
